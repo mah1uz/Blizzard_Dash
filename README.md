@@ -44,7 +44,9 @@ Game Over message box showing final score
 🚀 How to Run
 1. Make sure you have OpenGL + GLUT installed.
 
-2. Compile and run it using any compitable c++ compiler.
+2. Download the Blizzard_Dash folder.
+
+3. Open it as a project and run it using any compitable c++ compiler.(CodeBlocks preffered)
 
 
 
