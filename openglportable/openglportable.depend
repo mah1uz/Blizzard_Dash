@@ -67,14 +67,13 @@
 	<GL/glu.h>
 	<stdlib.h>
 
-1763185796 source:d:\a1\computer_graphics_fall25_26\lab3\openglportable\main.cpp
+1762582369 source:d:\a1\computer_graphics_fall25_26\lab2\openglportable\main.cpp
 	<GL/glut.h>
-	<bits/stdc++.h>
 
-1761806642 d:\a1\computer_graphics_fall25_26\lab3\freeglut\include\gl\glut.h
+1761806642 d:\a1\computer_graphics_fall25_26\lab2\freeglut\include\gl\glut.h
 	"freeglut_std.h"
 
-1761806642 d:\a1\computer_graphics_fall25_26\lab3\freeglut\include\gl\freeglut_std.h
+1761806642 d:\a1\computer_graphics_fall25_26\lab2\freeglut\include\gl\freeglut_std.h
 	<windows.h>
 	<EGL/egl.h>
 	<GLES/gl.h>
@@ -85,70 +84,20 @@
 	<GL/glu.h>
 	<stdlib.h>
 
-1764826328 source:d:\a1\computer_graphics_fall25_26\lab5\openglportable\main.cpp
+1762580824 source:d:\a1\computer_graphics_fall25_26\lab2\openglportable\test1.cpp
 	<GL/glut.h>
-	<bits/stdc++.h>
 
-1761806642 d:\a1\computer_graphics_fall25_26\lab5\freeglut\include\gl\glut.h
+1768501250 source:d:\a1\computer_graphics_fall25_26\sample_1\openglportable\main.cpp
+	<GL/glut.h>
+	<cmath>
+	<cstdlib>
+	<ctime>
+	<cstdio>
+
+1761806642 d:\a1\computer_graphics_fall25_26\sample_1\freeglut\include\gl\glut.h
 	"freeglut_std.h"
 
-1761806642 d:\a1\computer_graphics_fall25_26\lab5\freeglut\include\gl\freeglut_std.h
-	<windows.h>
-	<EGL/egl.h>
-	<GLES/gl.h>
-	<GLES2/gl2.h>
-	<OpenGL/gl.h>
-	<OpenGL/glu.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<stdlib.h>
-
-1765433122 source:d:\a1\computer_graphics_fall25_26\lab6\openglportable\main.cpp
-	<GL/glut.h>
-	<bits/stdc++.h>
-
-1761806642 d:\a1\computer_graphics_fall25_26\lab6\freeglut\include\gl\glut.h
-	"freeglut_std.h"
-
-1761806642 d:\a1\computer_graphics_fall25_26\lab6\freeglut\include\gl\freeglut_std.h
-	<windows.h>
-	<EGL/egl.h>
-	<GLES/gl.h>
-	<GLES2/gl2.h>
-	<OpenGL/gl.h>
-	<OpenGL/glu.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<stdlib.h>
-
-1765997660 source:d:\a1\computer_graphics_fall25_26\lab7\openglportable\main.cpp
-	<GL/glut.h>
-	<bits/stdc++.h>
-	<windows.h>
-
-1761806642 d:\a1\computer_graphics_fall25_26\lab7\freeglut\include\gl\glut.h
-	"freeglut_std.h"
-
-1761806642 d:\a1\computer_graphics_fall25_26\lab7\freeglut\include\gl\freeglut_std.h
-	<windows.h>
-	<EGL/egl.h>
-	<GLES/gl.h>
-	<GLES2/gl2.h>
-	<OpenGL/gl.h>
-	<OpenGL/glu.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<stdlib.h>
-
-1765997660 source:d:\a1\computer_graphics_fall25_26\blizzard_dash\blizzard_dash\lab7\openglportable\main.cpp
-	<GL/glut.h>
-	<bits/stdc++.h>
-	<windows.h>
-
-1761806642 d:\a1\computer_graphics_fall25_26\blizzard_dash\blizzard_dash\lab7\freeglut\include\gl\glut.h
-	"freeglut_std.h"
-
-1761806642 d:\a1\computer_graphics_fall25_26\blizzard_dash\blizzard_dash\lab7\freeglut\include\gl\freeglut_std.h
+1761806642 d:\a1\computer_graphics_fall25_26\sample_1\freeglut\include\gl\freeglut_std.h
 	<windows.h>
 	<EGL/egl.h>
 	<GLES/gl.h>
