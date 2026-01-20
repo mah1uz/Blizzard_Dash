@@ -1,13 +1,11 @@
 #include <GL/glut.h>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <cstdio>
 
-void display()  //this functions name can be anything
-{
-   glClear(GL_COLOR_BUFFER_BIT);
-
-
-
-   glFlush(); // flush whatever has been done
-}
+#define MAX_OBS 8
+#define MAX_SNOW 150
 
 //--------------------------------------------
 // LIFE PICKUP SYSTEM
@@ -47,6 +45,34 @@ void spawnLifePickup(int) {
         bullet.y = 1.2f;
     }
     glutTimerFunc(10000, spawnLifePickup, 0);
+}
+
+void drawLifeIcon(float x, float y, float scale) {
+    glPushMatrix();
+    glTranslatef(x, y, 0);
+    glScalef(scale, scale, 1);
+    glColor3f(1, 0, 0);
+
+    glBegin(GL_POLYGON);
+    for (int i = 0; i < 20; i++) {
+        float a = i * 2 * 3.1416f / 20;
+        glVertex2f(cos(a) * 0.015f - 0.01f, sin(a) * 0.015f + 0.01f);
+    }
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    for (int i = 0; i < 20; i++) {
+        float a = i * 2 * 3.1416f / 20;
+        glVertex2f(cos(a) * 0.015f + 0.01f, sin(a) * 0.015f + 0.01f);
+    }
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+        glVertex2f(-0.025f, 0.01f);
+        glVertex2f(0.025f, 0.01f);
+        glVertex2f(0.0f, -0.025f);
+    glEnd();
+    glPopMatrix();
 }
 
 
