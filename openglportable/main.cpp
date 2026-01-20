@@ -25,3 +25,23 @@ void drawPlayer() {
         glVertex2f(cos(a)*0.025f, sin(a)*0.025f + 0.085f);
     }
     glEnd();
+    
+    glPopMatrix();
+}
+
+// ---------------- DRAW OBSTACLES ----------------
+void drawTree(float x,float y,float scale){
+    glPushMatrix();
+    glTranslatef(x,y,0);
+    glScalef(scale,scale,1);
+    glColor3f(0,0.6f,0.2f);
+    glBegin(GL_TRIANGLES);
+        glVertex2f(0,0.12f); glVertex2f(-0.08f,-0.02f); glVertex2f(0.08f,-0.02f);
+    glEnd();
+    glColor3f(0.45f,0.25f,0.1f);
+    glBegin(GL_QUADS);
+        glVertex2f(-0.02f,-0.02f); glVertex2f(0.02f,-0.02f);
+        glVertex2f(0.02f,-0.10f); glVertex2f(-0.02f,-0.10f);
+    glEnd();
+    glPopMatrix();
+}
