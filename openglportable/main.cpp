@@ -40,6 +40,15 @@ void drawLifePickup() {
     glPopMatrix();
 }
 
+void spawnLifePickup(int) {
+    if (!gameOver && !bullet.active) {
+        bullet.active = true;
+        bullet.x = randRange(-0.4f, 0.4f);
+        bullet.y = 1.2f;
+    }
+    glutTimerFunc(10000, spawnLifePickup, 0);
+}
+
 
 //--------------------------------------------
 // PIXEL FONT DEFINITIONS (5x7 grid)
