@@ -63,3 +63,14 @@ void drawSnow(){
     for(int i=0;i<MAX_SNOW;i++) glVertex2f(snow[i].x,snow[i].y);
     glEnd();
 }
+void drawBullet(){
+    if(!bullet.active) return;
+    glPushMatrix();
+    glTranslatef(bullet.x, bullet.y, 0);
+    glColor3f(1,0,0); // red bullet
+    glBegin(GL_QUADS);
+        glVertex2f(-0.01f,0.02f); glVertex2f(0.01f,0.02f);
+        glVertex2f(0.01f,-0.02f); glVertex2f(-0.01f,-0.02f);
+    glEnd();
+    glPopMatrix();
+}
