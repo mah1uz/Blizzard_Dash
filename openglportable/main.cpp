@@ -10,6 +10,38 @@ void display()  //this functions name can be anything
 }
 
 //--------------------------------------------
+// LIFE PICKUP SYSTEM
+//--------------------------------------------
+void drawLifePickup() {
+    if (!bullet.active) return;
+    glPushMatrix();
+    glTranslatef(bullet.x, bullet.y, 0);
+    glColor3f(1, 0, 0);
+
+    glBegin(GL_POLYGON);
+    for (int i = 0; i < 20; i++) {
+        float a = i * 2 * 3.1416f / 20;
+        glVertex2f(cos(a) * 0.015f - 0.01f, sin(a) * 0.015f + 0.01f);
+    }
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    for (int i = 0; i < 20; i++) {
+        float a = i * 2 * 3.1416f / 20;
+        glVertex2f(cos(a) * 0.015f + 0.01f, sin(a) * 0.015f + 0.01f);
+    }
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+        glVertex2f(-0.025f, 0.01f);
+        glVertex2f(0.025f, 0.01f);
+        glVertex2f(0.0f, -0.025f);
+    glEnd();
+    glPopMatrix();
+}
+
+
+//--------------------------------------------
 // PIXEL FONT DEFINITIONS (5x7 grid)
 //--------------------------------------------
 // Each letter is a 5x7 grid (width x height). 1 = pixel on, 0 = off.
@@ -174,8 +206,6 @@ void display() {
             drawRock(obs[i].x, obs[i].y, scale);
     }
 
-    drawPlayer();
-    drawSnow();
     drawLifePickup();
 
     // Score & High Score
@@ -208,12 +238,6 @@ if (gameOver) {
         glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
     }
 
-    // Restart prompt — centered below score
-    glRasterPos2f(-0.12f, -0.48f);
-    const char* restart = "Press R to Restart";
-    for (const char* c = restart; *c != '\0'; c++) {
-        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
-    }
 }
 
     glutSwapBuffers();
