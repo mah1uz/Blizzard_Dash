@@ -45,3 +45,14 @@ void drawTree(float x,float y,float scale){
     glEnd();
     glPopMatrix();
 }
+void drawRock(float x,float y,float scale){
+    glPushMatrix();
+    glTranslatef(x,y,0);
+    glScalef(scale,scale,1);
+    glColor3f(0.5f,0.5f,0.5f);
+    glBegin(GL_POLYGON);
+        glVertex2f(-0.05f,-0.02f); glVertex2f(-0.02f,0.04f);
+        glVertex2f(0.05f,0.03f); glVertex2f(0.06f,-0.02f); glVertex2f(0.02f,-0.05f);
+    glEnd();
+    glPopMatrix();
+}
