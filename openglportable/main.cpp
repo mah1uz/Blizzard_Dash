@@ -56,3 +56,10 @@ void drawRock(float x,float y,float scale){
     glEnd();
     glPopMatrix();
 }
+void drawSnow(){
+    glColor3f(1,1,1);
+    glPointSize(2);
+    glBegin(GL_POINTS);
+    for(int i=0;i<MAX_SNOW;i++) glVertex2f(snow[i].x,snow[i].y);
+    glEnd();
+}
