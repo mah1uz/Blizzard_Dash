@@ -129,3 +129,24 @@
 	<GL/glu.h>
 	<stdlib.h>
 
+1768974605 source:c:\users\mahfuz\study materials\cg\blizzard_dash\openglportable\main.cpp
+	<GL/glut.h>
+	<cmath>
+	<cstdlib>
+	<ctime>
+	<cstdio>
+
+1761806642 c:\users\mahfuz\study materials\cg\blizzard_dash\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1761806642 c:\users\mahfuz\study materials\cg\blizzard_dash\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+

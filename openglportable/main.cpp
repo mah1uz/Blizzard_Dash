@@ -145,7 +145,7 @@ void drawLifeIcon(float x, float y, float scale) {
 // SCENE DESIGN
 //--------------------------------------------
 float getScale(float y) {
-    return 0.6f + (1.0f - y) * 0.2f;
+    return 0.6f + (1.0f - y) * 0.1f;
 }
 
 void drawPlayer() {
@@ -166,7 +166,7 @@ void drawPlayer() {
     glPopMatrix();
 }
 
-// >>>>>>>>>>> IMPROVED TREE DESIGN <<<<<<<<<<<<
+// >>>>>>>>>>>  TREE DESIGN <<<<<<<<<<<<
 void drawTree(float x, float y, float scale) {
     glPushMatrix();
     glTranslatef(x, y, 0);
@@ -366,19 +366,25 @@ void display() {
     glColor3f(0.7f, 0.7f, 0.75f);
     glBegin(GL_QUADS);
         glVertex2f(-0.5f, -1); glVertex2f(0.5f, -1);
-        glVertex2f(0.25f, 1); glVertex2f(-0.25f, 1);
+        glVertex2f(0.5f, 1); glVertex2f(-0.5f, 1);
     glEnd();
 
     // Obstacles: Trees, Rocks, Snowmen
-    for (int i = 0; i < MAX_OBS; i++) {
-        float scale = getScale(obs[i].y);
-        if (obs[i].isTree)
-            drawTree(obs[i].x, obs[i].y, scale);
-        else if (obs[i].isSnowman)
-            drawSnowman(obs[i].x, obs[i].y, scale);
-        else
-            drawRock(obs[i].x, obs[i].y, scale);
-    }
+   // Draw rocks first
+for (int i = 0; i < MAX_OBS; i++)
+    if (!obs[i].isTree && !obs[i].isSnowman)
+        drawRock(obs[i].x, obs[i].y, getScale(obs[i].y));
+
+// Draw snowmen next
+for (int i = 0; i < MAX_OBS; i++)
+    if (obs[i].isSnowman)
+        drawSnowman(obs[i].x, obs[i].y, getScale(obs[i].y));
+
+// Draw trees last (on top)
+for (int i = 0; i < MAX_OBS; i++)
+    if (obs[i].isTree)
+        drawTree(obs[i].x, obs[i].y, getScale(obs[i].y));
+
 
     drawPlayer();
     drawSnow();
